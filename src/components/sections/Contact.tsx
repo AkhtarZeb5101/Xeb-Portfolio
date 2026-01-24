@@ -60,7 +60,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, collaborations, or just 
+              I'm always open to discussing new opportunities, collaborations, or just
               having a friendly chat about IT and technology. Feel free to reach out!
             </p>
           </div>
@@ -95,17 +95,19 @@ const Contact = () => {
           {/* Social Links */}
           <div className="glass-card text-center">
             <h3 className="font-semibold mb-6">Connect With Me</h3>
-            <div className="flex justify-center gap-4">
+
+            {/* ✅ Responsive container */}
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 rounded-xl glass transition-all duration-300 hover:scale-110 ${link.color}`}
+                  className={`p-3 sm:p-4 rounded-xl glass transition-all duration-300 hover:scale-110 ${link.color}`}
                   aria-label={link.label}
                 >
-                  <link.icon className="h-6 w-6" />
+                  <link.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </a>
               ))}
             </div>
