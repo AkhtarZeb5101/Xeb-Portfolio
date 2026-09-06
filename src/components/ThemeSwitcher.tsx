@@ -9,10 +9,11 @@ import {
 import { Button } from '@/components/ui/button';
 
 const themes = [
-  { id: 'ocean', name: 'Ocean', color: 'hsl(210, 100%, 50%)' },
-  { id: 'sunset', name: 'Sunset', color: 'hsl(25, 95%, 55%)' },
-  { id: 'forest', name: 'Forest', color: 'hsl(150, 70%, 40%)' },
-  { id: 'purple', name: 'Purple', color: 'hsl(270, 80%, 60%)' },
+  { id: 'slate', name: 'Steel Slate', color: 'hsl(215, 25%, 50%)' },
+  { id: 'amber', name: 'Amber Slate', color: '#bf891d' },
+  { id: 'ocean', name: 'Executive Navy', color: 'hsl(217, 91%, 52%)' },
+  { id: 'emerald', name: 'Emerald Tech', color: 'hsl(160, 84%, 39%)' },
+  { id: 'nordic', name: 'Nordic Ice', color: 'hsl(201, 96%, 46%)' },
 ] as const;
 
 const ThemeSwitcher = () => {
@@ -23,7 +24,7 @@ const ThemeSwitcher = () => {
       {/* Color Theme Picker */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="h-9 w-9">
+          <Button variant="ghost" size="icon" className="h-9 w-9" aria-label="Select color theme">
             <Palette className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
@@ -35,12 +36,12 @@ const ThemeSwitcher = () => {
               className="flex items-center gap-2 cursor-pointer"
             >
               <div
-                className="w-4 h-4 rounded-full"
+                className="w-4 h-4 rounded-full border border-border/50 shadow-sm"
                 style={{ background: theme.color }}
               />
               <span>{theme.name}</span>
               {colorTheme === theme.id && (
-                <span className="ml-auto text-primary">✓</span>
+                <span className="ml-auto text-primary font-bold">✓</span>
               )}
             </DropdownMenuItem>
           ))}
@@ -53,6 +54,8 @@ const ThemeSwitcher = () => {
         size="icon"
         onClick={toggleMode}
         className="h-9 w-9"
+        aria-label={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
+        title={mode === 'dark' ? "Switch to light mode" : "Switch to dark mode"}
       >
         {mode === 'dark' ? (
           <Sun className="h-4 w-4" />

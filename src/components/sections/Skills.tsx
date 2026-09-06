@@ -6,99 +6,102 @@ import {
   Code, 
   FileText, 
   Users, 
-  Headphones,
-  Database,
-  Terminal,
-  Shield,
-  Settings,
-  Laptop,
+  Headphones, 
+  Terminal, 
+  Shield, 
+  Settings, 
+  Box, 
+  GitBranch, 
+  BarChart3, 
+  Wrench,
+  FileCheck2,
+  FolderTree,
+  FileSpreadsheet,
+  Activity,
+  Layers,
   HardDrive,
   Wifi,
-  Box
+  Lock,
+  Workflow
 } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: 'IT Support & Service Desk',
+    title: 'IT Analysis & Business Intelligence',
+    icon: BarChart3,
+    badgeColor: 'bg-blue-500/10 text-blue-500 border-blue-500/20',
+    skills: [
+      { name: 'Microsoft Power BI (Dashboards & DAX)', icon: BarChart3 },
+      { name: 'Advanced Microsoft Excel (Power Query)', icon: FileSpreadsheet },
+      { name: 'Systems Analysis & Requirements Gathering', icon: Activity },
+      { name: 'Workflow Mapping & Process Diagrams', icon: Workflow },
+      { name: 'IT Metrics, KPI & SLA Reporting', icon: BarChart3 },
+      { name: 'Root Cause Analysis (RCA)', icon: Wrench },
+    ],
+  },
+  {
+    title: 'Document Control & Information Systems',
+    icon: FileCheck2,
+    badgeColor: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20',
+    skills: [
+      { name: 'Electronic Document Management (EDMS)', icon: FolderTree },
+      { name: 'Document Version Control & Archiving', icon: FileCheck2 },
+      { name: 'Records Lifecycle & Retention Compliance', icon: Layers },
+      { name: 'Standard Operating Procedures (SOPs)', icon: FileText },
+      { name: 'Technical Documentation & Knowledge Base', icon: FileText },
+      { name: 'Data Classification & Integrity', icon: Lock },
+    ],
+  },
+  {
+    title: 'IT Service Management & Support (ITIL)',
     icon: Headphones,
-    color: 'from-blue-500 to-cyan-500',
+    badgeColor: 'bg-sky-500/10 text-sky-500 border-sky-500/20',
     skills: [
-      { name: 'Desktop Support', icon: Monitor },
-      { name: 'End-User Support', icon: Users },
-      { name: 'IT Help Desk', icon: Headphones },
-      { name: 'Remote Support', icon: Laptop },
+      { name: 'ITIL v4 Framework & Best Practices', icon: FileText },
+      { name: 'Incident, Problem & Request Management', icon: Activity },
+      { name: 'Help Desk & L1/L2 Technical Support', icon: Headphones },
+      { name: 'Ticketing Systems (Jira & ServiceNow)', icon: Monitor },
+      { name: 'Remote Desktop Support (AnyDesk, RDP)', icon: Monitor },
+      { name: 'Customer Service & User Communication', icon: Users },
     ],
   },
   {
-    title: 'System Administration',
+    title: 'Systems & Cloud Administration',
     icon: Server,
-    color: 'from-purple-500 to-pink-500',
+    badgeColor: 'bg-indigo-500/10 text-indigo-500 border-indigo-500/20',
     skills: [
-      { name: 'MS365', icon: FileText },
-      { name: 'Windows', icon: Monitor },
-      { name: 'Linux', icon: Terminal },
-      { name: 'MacOS', icon: Laptop },
-      { name: 'Active Directory', icon: Shield },
+      { name: 'Active Directory (AD DS) & Group Policy', icon: Server },
+      { name: 'Microsoft Entra ID (Azure AD)', icon: Cloud },
+      { name: 'Microsoft 365 Admin Center', icon: Cloud },
+      { name: 'Microsoft Intune (Endpoint Management)', icon: Settings },
+      { name: 'Windows & Linux Administration', icon: Terminal },
+      { name: 'Virtualization (VMware & VirtualBox)', icon: Box },
     ],
   },
   {
-    title: 'Networking Fundamentals',
-    icon: Network,
-    color: 'from-green-500 to-emerald-500',
+    title: 'Network Infrastructure & IT Security',
+    icon: Shield,
+    badgeColor: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
     skills: [
-      { name: 'Network Protocols', icon: Wifi },
-      { name: 'TCP/IP', icon: Network },
-      { name: 'DNS', icon: Database },
-      { name: 'DHCP', icon: Server },
-      { name: 'VPN Setup', icon: Shield },
-      { name: 'Routers & Switches', icon: Box },
+      { name: 'TCP/IP, DNS, DHCP & Subnetting', icon: Network },
+      { name: 'VPN Configuration & Secure Remote Access', icon: Wifi },
+      { name: 'Network Troubleshooting & Diagnostics', icon: Settings },
+      { name: 'Hardware & Software Asset Tracking (CMDB)', icon: HardDrive },
+      { name: 'Cybersecurity Fundamentals & Endpoint Defense', icon: Shield },
+      { name: 'Data Backup & Recovery Systems', icon: HardDrive },
     ],
   },
   {
-    title: 'Ticketing & Virtualization',
-    icon: Settings,
-    color: 'from-orange-500 to-red-500',
+    title: 'Automation, DevOps & Web Tools',
+    icon: Terminal,
+    badgeColor: 'bg-slate-500/10 text-slate-400 border-slate-500/20',
     skills: [
-      { name: 'Jira', icon: FileText },
-      { name: 'ZenDesk', icon: Headphones },
-      { name: 'RDPs', icon: Monitor },
-      { name: 'VMware', icon: HardDrive },
-      { name: 'VirtualBox', icon: Box },
-    ],
-  },
-  {
-    title: 'Cloud & Scripting',
-    icon: Cloud,
-    color: 'from-cyan-500 to-blue-500',
-    skills: [
-      { name: 'Git', icon: Code },
-      { name: 'Azure', icon: Cloud },
-      { name: 'Bash', icon: Terminal },
-      { name: 'PowerShell', icon: Terminal },
-    ],
-  },
-  {
-    title: 'Programming & Productivity',
-    icon: Code,
-    color: 'from-pink-500 to-purple-500',
-    skills: [
-      { name: 'Python', icon: Code },
-      { name: 'JavaScript', icon: Code },
-      { name: 'Office365', icon: FileText },
-      { name: 'Microsoft Excel', icon: FileText },
-      { name: 'Canva', icon: Monitor },
-    ],
-  },
-  {
-    title: 'Soft Skills',
-    icon: Users,
-    color: 'from-emerald-500 to-teal-500',
-    skills: [
-      { name: 'Problem-solving', icon: Settings },
-      { name: 'Communication', icon: Users },
-      { name: 'Teamwork', icon: Users },
-      { name: 'Documentation', icon: FileText },
-      { name: 'Time Management', icon: Settings },
+      { name: 'PowerShell Scripting & Automation', icon: Terminal },
+      { name: 'Bash Scripting & Linux CLI', icon: Terminal },
+      { name: 'Git, GitHub & GitLab (Version Control)', icon: GitBranch },
+      { name: 'Azure DevOps Services', icon: Cloud },
+      { name: 'Jira Workflows & Project Tracking', icon: Layers },
+      { name: 'Web Technologies (HTML, CSS, JavaScript)', icon: Code },
     ],
   },
 ];
@@ -107,36 +110,43 @@ const Skills = () => {
   return (
     <section id="skills" className="py-12 sm:py-16 px-4">
       <div className="container mx-auto">
-        <h2 className="section-title text-center">
-          Technical <span className="text-gradient">Skills</span>
-        </h2>
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="section-title text-center mb-3">
+            Technical & <span className="text-gradient">Analytical Skills</span>
+          </h2>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+            Comprehensive skill set spanning IT Systems Analysis, Power BI, Document Control, ITIL Service Desk, and Enterprise Administration.
+          </p>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
-              className="glass-card animate-fade-in"
+              className="glass-card animate-fade-in flex flex-col justify-between"
               style={{ animationDelay: `${categoryIndex * 0.1}s` }}
             >
-              {/* Category Header */}
-              <div className="flex items-center gap-3 mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color}`}>
-                  <category.icon className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="font-semibold text-lg">{category.title}</h3>
-              </div>
-
-              {/* Skills Grid */}
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/50 hover:bg-primary/10 transition-colors group cursor-default"
-                  >
-                    <skill.icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-sm">{skill.name}</span>
+              <div>
+                {/* Category Header */}
+                <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5">
+                  <div className={`p-2 sm:p-2.5 rounded-xl border ${category.badgeColor} flex-shrink-0`}>
+                    <category.icon className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                   </div>
-                ))}
+                  <h3 className="font-semibold text-sm sm:text-base md:text-lg leading-snug">{category.title}</h3>
+                </div>
+
+                {/* Skills Grid */}
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                  {category.skills.map((skill) => (
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-card/60 hover:bg-primary/10 border border-border/80 hover:border-primary/30 transition-all duration-200 group cursor-default shadow-xs"
+                    >
+                      <skill.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                      <span className="text-xs sm:text-sm font-medium">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

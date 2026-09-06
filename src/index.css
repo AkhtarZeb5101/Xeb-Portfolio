@@ -6,158 +6,231 @@
 
 @layer base {
   :root {
-    /* Default Ocean Theme */
-    --background: 220 25% 97%;
-    --foreground: 220 30% 10%;
+    /* Steel Slate Theme by Default (Clean Architectural Tech) */
+    --background: 215 25% 98%;
+    --foreground: 222 35% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 10%;
+    --card-foreground: 222 35% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover-foreground: 222 35% 12%;
 
-    --primary: 210 100% 50%;
+    --primary: 215 25% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 92%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 215 20% 93%;
+    --secondary-foreground: 222 30% 16%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 215 20% 94%;
+    --muted-foreground: 218 16% 45%;
 
-    --accent: 280 80% 60%;
+    --accent: 215 18% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 210 100% 50%;
+    --border: 216 20% 88%;
+    --input: 216 20% 88%;
+    --ring: 215 25% 45%;
 
-    --radius: 1rem;
+    --radius: 0.875rem;
 
-    /* Glassmorphism tokens */
-    --glass-bg: 0 0% 100% / 0.7;
-    --glass-border: 0 0% 100% / 0.3;
-    --glass-blur: 20px;
+    /* Refined Glassmorphism tokens */
+    --glass-bg: 0 0% 100% / 0.85;
+    --glass-border: 216 20% 86% / 0.6;
+    --glass-blur: 16px;
     
-    /* Gradient orbs */
-    --orb-1: 210 100% 60%;
-    --orb-2: 280 80% 65%;
-    --orb-3: 340 80% 60%;
+    /* Steel Slate ambient lighting */
+    --orb-1: 215 25% 65%;
+    --orb-2: 220 20% 70%;
+    --orb-3: 210 15% 75%;
 
     /* Sidebar tokens */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 215 25% 45%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 215 20% 94%;
+    --sidebar-accent-foreground: 222 30% 16%;
+    --sidebar-border: 216 20% 90%;
+    --sidebar-ring: 215 25% 45%;
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 220 20% 95%;
+    /* Steel Slate Dark Mode (Refined Architectural Slate) */
+    --background: 222 47% 7%;
+    --foreground: 210 30% 96%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 220 20% 95%;
+    --card: 222 40% 10%;
+    --card-foreground: 210 30% 96%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 220 20% 95%;
+    --popover: 222 40% 10%;
+    --popover-foreground: 210 30% 96%;
 
-    --primary: 210 100% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 215 20% 72%;
+    --primary-foreground: 222 47% 7%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 220 20% 90%;
+    --secondary: 222 25% 15%;
+    --secondary-foreground: 210 25% 90%;
 
-    --muted: 220 25% 15%;
-    --muted-foreground: 220 15% 60%;
+    --muted: 222 25% 14%;
+    --muted-foreground: 217 18% 65%;
 
-    --accent: 280 80% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 215 25% 82%;
+    --accent-foreground: 222 47% 7%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 210 100% 55%;
+    --border: 222 25% 18%;
+    --input: 222 25% 18%;
+    --ring: 215 20% 72%;
 
-    /* Dark glassmorphism */
-    --glass-bg: 220 30% 15% / 0.6;
-    --glass-border: 0 0% 100% / 0.1;
+    /* Dark refined glass */
+    --glass-bg: 222 40% 11% / 0.75;
+    --glass-border: 222 25% 22% / 0.45;
     
-    /* Dark orbs */
-    --orb-1: 210 100% 40%;
-    --orb-2: 280 80% 45%;
-    --orb-3: 340 80% 40%;
+    /* Steel Slate ambient depth */
+    --orb-1: 215 20% 25%;
+    --orb-2: 220 15% 20%;
+    --orb-3: 210 15% 15%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 222 40% 10%;
+    --sidebar-foreground: 210 30% 96%;
+    --sidebar-primary: 215 20% 72%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-accent: 222 25% 16%;
+    --sidebar-accent-foreground: 210 25% 90%;
+    --sidebar-border: 222 25% 18%;
+    --sidebar-ring: 215 20% 72%;
+  }
+
+  /* Steel Slate Theme (Clean Architectural Tech) */
+  .theme-slate {
+    --primary: 215 25% 45%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 215 18% 60%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 215 25% 45%;
+    --orb-1: 215 25% 65%;
+    --orb-2: 220 20% 70%;
+    --orb-3: 210 15% 75%;
+    --sidebar-primary: 215 25% 45%;
+    --sidebar-ring: 215 25% 45%;
+  }
+
+  .theme-slate.dark {
+    --primary: 215 20% 72%;
+    --primary-foreground: 222 47% 7%;
+    --accent: 215 25% 82%;
+    --accent-foreground: 222 47% 7%;
+    --ring: 215 20% 72%;
+    --orb-1: 215 20% 25%;
+    --orb-2: 220 15% 20%;
+    --orb-3: 210 15% 15%;
+    --sidebar-primary: 215 20% 72%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-ring: 215 20% 72%;
+  }
+
+  /* Amber Slate Theme (#bf891d - Warm Architectural Tech & Brushed Bronze) */
+  .theme-amber {
+    --primary: 40 74% 43%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 36 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 40 74% 43%;
+    --orb-1: 40 60% 75%;
+    --orb-2: 35 50% 80%;
+    --orb-3: 45 40% 85%;
+    --sidebar-primary: 40 74% 43%;
+    --sidebar-ring: 40 74% 43%;
+  }
+
+  .theme-amber.dark {
+    --primary: 40 65% 70%;
+    --primary-foreground: 222 47% 7%;
+    --accent: 38 70% 80%;
+    --accent-foreground: 222 47% 7%;
+    --ring: 40 65% 70%;
+    --orb-1: 40 55% 22%;
+    --orb-2: 35 45% 18%;
+    --orb-3: 45 35% 15%;
+    --sidebar-primary: 40 65% 70%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-ring: 40 65% 70%;
+  }
+
+  /* Executive Navy Theme (Enterprise Cobalt) */
+  .theme-ocean {
+    --primary: 217 91% 52%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 199 89% 46%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 217 91% 52%;
+    --orb-1: 217 85% 75%;
+    --orb-2: 199 75% 80%;
+    --orb-3: 215 45% 85%;
+    --sidebar-primary: 217 91% 52%;
+    --sidebar-ring: 217 91% 52%;
+  }
+
+  .theme-ocean.dark {
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 199 89% 52%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 217 91% 60%;
+    --orb-1: 217 80% 25%;
+    --orb-2: 199 65% 20%;
+    --orb-3: 222 50% 16%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217 91% 60%;
   }
 
-  /* Sunset Theme */
-  .theme-sunset {
-    --primary: 25 95% 55%;
+  /* Emerald Tech Theme (IT Infrastructure / Terminal Green) */
+  .theme-emerald {
+    --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
-    --accent: 340 80% 55%;
+    --accent: 180 70% 45%;
     --accent-foreground: 0 0% 100%;
-    --ring: 25 95% 55%;
-    --orb-1: 25 95% 60%;
-    --orb-2: 340 80% 60%;
-    --orb-3: 280 70% 55%;
+    --ring: 160 84% 39%;
+    --orb-1: 160 70% 60%;
+    --orb-2: 180 60% 65%;
+    --orb-3: 150 50% 65%;
   }
 
-  .theme-sunset.dark {
-    --orb-1: 25 95% 40%;
-    --orb-2: 340 80% 40%;
-    --orb-3: 280 70% 35%;
-  }
-
-  /* Forest Theme */
-  .theme-forest {
-    --primary: 150 70% 40%;
+  .theme-emerald.dark {
+    --primary: 160 75% 45%;
     --primary-foreground: 0 0% 100%;
-    --accent: 180 60% 45%;
-    --accent-foreground: 0 0% 100%;
-    --ring: 150 70% 40%;
-    --orb-1: 150 70% 50%;
-    --orb-2: 180 60% 50%;
-    --orb-3: 120 50% 45%;
+    --accent: 180 65% 50%;
+    --orb-1: 160 60% 20%;
+    --orb-2: 180 50% 18%;
+    --orb-3: 150 40% 15%;
   }
 
-  .theme-forest.dark {
-    --orb-1: 150 70% 30%;
-    --orb-2: 180 60% 30%;
-    --orb-3: 120 50% 25%;
-  }
-
-  /* Purple Theme */
-  .theme-purple {
-    --primary: 270 80% 60%;
+  /* Nordic Blue Theme (Clean Ice Tech) */
+  .theme-nordic {
+    --primary: 201 96% 46%;
     --primary-foreground: 0 0% 100%;
-    --accent: 320 70% 55%;
+    --accent: 217 85% 58%;
     --accent-foreground: 0 0% 100%;
-    --ring: 270 80% 60%;
-    --orb-1: 270 80% 65%;
-    --orb-2: 320 70% 60%;
-    --orb-3: 240 70% 60%;
+    --ring: 201 96% 46%;
+    --orb-1: 201 90% 65%;
+    --orb-2: 217 80% 70%;
+    --orb-3: 190 70% 65%;
   }
 
-  .theme-purple.dark {
-    --orb-1: 270 80% 40%;
-    --orb-2: 320 70% 35%;
-    --orb-3: 240 70% 35%;
+  .theme-nordic.dark {
+    --primary: 201 92% 52%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 217 80% 62%;
+    --orb-1: 201 70% 22%;
+    --orb-2: 217 65% 20%;
+    --orb-3: 190 55% 16%;
   }
 }
 
@@ -180,20 +253,20 @@
   }
 
   .glass-card {
-    @apply glass rounded-2xl p-6 transition-all duration-300;
-    box-shadow: 0 8px 32px hsl(var(--primary) / 0.1);
+    @apply glass rounded-2xl p-4 sm:p-6 transition-all duration-300;
+    box-shadow: 0 4px 24px -2px hsl(var(--primary) / 0.06), 0 2px 8px -2px hsl(var(--foreground) / 0.04);
   }
 
   .glass-card:hover {
-    box-shadow: 0 12px 40px hsl(var(--primary) / 0.15);
+    box-shadow: 0 12px 36px -4px hsl(var(--primary) / 0.14), 0 4px 14px -2px hsl(var(--foreground) / 0.06);
     transform: translateY(-2px);
   }
 
   .gradient-orb {
     position: fixed;
     border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.35;
+    filter: blur(80px);
+    opacity: 0.18;
     pointer-events: none;
     z-index: -1;
     will-change: transform;
@@ -241,7 +314,7 @@
   }
 
   .skill-icon {
-    @apply w-12 h-12 flex items-center justify-center rounded-xl glass transition-all duration-300;
+    @apply w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl glass transition-all duration-300 flex-shrink-0;
   }
 
   .skill-icon:hover {

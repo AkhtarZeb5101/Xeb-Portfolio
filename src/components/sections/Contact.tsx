@@ -17,7 +17,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Lahore, Punjab, Pakistan',
+    value: 'Swat, Khyber Pakhtunkhwa, Pakistan',
     href: null,
   },
 ];
@@ -27,7 +27,7 @@ const socialLinks = [
     icon: Linkedin,
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/akhtar-zeb-bacha-155670236/',
-    color: 'hover:bg-[hsl(210,100%,50%)] hover:text-white',
+    color: 'hover:bg-primary hover:text-white',
   },
   {
     icon: Github,
@@ -39,13 +39,13 @@ const socialLinks = [
     icon: Mail,
     label: 'Email',
     href: 'mailto:azaib5101@gmail.com',
-    color: 'hover:bg-[hsl(340,80%,55%)] hover:text-white',
+    color: 'hover:bg-primary hover:text-white',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
     href: 'https://wa.me/923495452856',
-    color: 'hover:bg-[hsl(142,70%,45%)] hover:text-white',
+    color: 'hover:bg-emerald-600 hover:text-white',
   },
 ];
 
@@ -65,57 +65,57 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 mb-6 sm:mb-8">
             {contactInfo.map((info, index) => (
               <div
                 key={info.label}
-                className="glass-card text-center animate-fade-in"
+                className="glass-card text-center animate-fade-in p-4 sm:p-6"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 mb-4">
-                  <info.icon className="h-6 w-6 text-primary" />
+                <div className="inline-flex p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-primary/10 border border-primary/20 text-primary mb-3 sm:mb-4 flex-shrink-0">
+                  <info.icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
                 </div>
-                <h3 className="font-semibold mb-2">{info.label}</h3>
+                <h3 className="font-semibold text-sm sm:text-base mb-1 sm:mb-2">{info.label}</h3>
                 {info.href ? (
                   <a
                     href={info.href}
                     target={info.href.startsWith('http') ? '_blank' : undefined}
                     rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                   >
                     {info.value}
                   </a>
                 ) : (
-                  <p className="text-muted-foreground">{info.value}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground break-words">{info.value}</p>
                 )}
               </div>
             ))}
           </div>
 
           {/* Social Links */}
-          <div className="glass-card text-center">
-            <h3 className="font-semibold mb-6">Connect With Me</h3>
+          <div className="glass-card text-center p-4 sm:p-6">
+            <h3 className="font-semibold text-sm sm:text-base mb-4 sm:mb-6">Connect With Me</h3>
 
             {/* ✅ Responsive container */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 sm:p-4 rounded-xl glass transition-all duration-300 hover:scale-110 ${link.color}`}
+                  className={`p-2.5 sm:p-3.5 rounded-xl glass transition-all duration-300 hover:scale-110 flex-shrink-0 ${link.color}`}
                   aria-label={link.label}
                 >
-                  <link.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <link.icon className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                 </a>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-border">
-              <Button size="lg" asChild>
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-border">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <a href="mailto:azaib5101@gmail.com">
-                  <Send className="mr-2 h-4 w-4" />
+                  <Send className="mr-2 h-4 w-4 flex-shrink-0" />
                   Send Me an Email
                 </a>
               </Button>

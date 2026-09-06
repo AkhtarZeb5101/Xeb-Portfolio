@@ -7,7 +7,7 @@ const socialLinks = [
     name: 'LinkedIn',
     icon: Linkedin,
     href: 'https://www.linkedin.com/in/akhtar-zeb-bacha-155670236/',
-    color: 'hover:text-[hsl(210,100%,50%)]',
+    color: 'hover:text-primary',
   },
   {
     name: 'GitHub',
@@ -19,13 +19,13 @@ const socialLinks = [
     name: 'Email',
     icon: Mail,
     href: 'mailto:azaib5101@gmail.com',
-    color: 'hover:text-[hsl(340,80%,55%)]',
+    color: 'hover:text-primary',
   },
   {
     name: 'WhatsApp',
     icon: MessageCircle,
     href: 'https://wa.me/923495452856',
-    color: 'hover:text-[hsl(142,70%,45%)]',
+    color: 'hover:text-emerald-500',
   },
 ];
 
@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           {/* Profile Image */}
           <div className="relative animate-fade-in flex-shrink-0" style={{ animationDelay: '0.2s' }}>
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden glass-card p-1.5 sm:p-2">
+            <div className="w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden glass-card p-1 sm:p-1.5">
               <img
                 src={profileImage}
                 alt="Akhtar Zeb"
@@ -48,56 +48,56 @@ const Hero = () => {
           </div>
 
           {/* Content */}
-          <div className="text-center lg:text-left max-w-2xl">
-            <p 
-              className="text-primary font-medium mb-2 animate-fade-in"
+          <div className="text-center lg:text-left max-w-2xl w-full">
+            <p
+              className="text-primary font-medium text-xs sm:text-sm mb-1 sm:mb-2 animate-fade-in"
               style={{ animationDelay: '0.3s' }}
             >
               Hello, I'm
             </p>
-            <h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 animate-fade-in"
+            <h1
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-4 animate-fade-in"
               style={{ animationDelay: '0.4s' }}
             >
               <span className="text-gradient">Akhtar Zeb</span> Bacha
             </h1>
-            <h2 
-              className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6 animate-fade-in"
+            <h2
+              className="text-xs sm:text-base md:text-xl text-muted-foreground mb-3 sm:mb-6 animate-fade-in leading-snug font-medium"
               style={{ animationDelay: '0.5s' }}
             >
-              L1/L2 IT Support, Desktop Engineer, Computer Operator, Data Operator, Computer Science Graduate
+              IT Analyst | Desktop Support & SysAdmin | Document Controller | L1/L2 Technical Support
             </h2>
-            <p 
-              className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed animate-fade-in"
+            <p
+              className="text-xs sm:text-base text-muted-foreground mb-5 sm:mb-8 leading-relaxed animate-fade-in"
               style={{ animationDelay: '0.6s' }}
             >
-              Optimistic and detail-oriented Computer Science graduate with hands-on experience 
-              in L1/L2 IT Support, Desktop Support & Data-Entry. Proficient in system troubleshooting, 
-              Windows, MacOS & Linux OS configuration, and virtual machine management.
+              Detail-oriented Computer Science graduate with 2+ years of hands-on experience in IT Systems Analysis, 
+              Desktop Support, System Administration, and Document Control. Skilled in troubleshooting, Power BI 
+              analytics dashboards, Active Directory, MS365, EDMS digital archiving, and ITIL-aligned service desk operations.
             </p>
 
             {/* CTA Buttons */}
-            <div 
-              className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8 animate-fade-in"
+            <div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-6 sm:mb-8 animate-fade-in w-full sm:w-auto"
               style={{ animationDelay: '0.7s' }}
             >
-              <Button size="lg" asChild>
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <a href="#contact">
-                  <Mail className="mr-2 h-4 w-4" />
+                  <Mail className="mr-2 h-4 w-4 flex-shrink-0" />
                   Get In Touch
                 </a>
               </Button>
-              <Button variant="outline" size="lg" asChild className="glass">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto glass" asChild>
                 <a href="/Akhtar_Zeb_CV.pdf" download>
-                  <Download className="mr-2 h-4 w-4" />
+                  <Download className="mr-2 h-4 w-4 flex-shrink-0" />
                   Download CV
                 </a>
               </Button>
             </div>
 
             {/* Social Links */}
-            <div 
-              className="flex gap-4 justify-center lg:justify-start animate-fade-in"
+            <div
+              className="flex gap-2.5 sm:gap-4 justify-center lg:justify-start animate-fade-in"
               style={{ animationDelay: '0.8s' }}
             >
               {socialLinks.map((link) => (
@@ -106,10 +106,10 @@ const Hero = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 glass rounded-xl transition-all duration-300 hover:scale-110 ${link.color}`}
+                  className={`p-2.5 sm:p-3 glass rounded-xl transition-all duration-300 hover:scale-110 flex-shrink-0 ${link.color}`}
                   aria-label={link.name}
                 >
-                  <link.icon className="h-5 w-5" />
+                  <link.icon className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                 </a>
               ))}
             </div>
